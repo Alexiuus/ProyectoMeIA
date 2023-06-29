@@ -9,23 +9,22 @@
 - `Sergio Mauricio Nuñez`
 
 ## Introducción
+
 El propósito de este proyecto es mejorar la calidad de la red neuronal provista utilizando técnicas de aumentación de datos y modificando los parámetros de la red.
  
 ## Data Augmentation
 
 ### Primera forma
 
-Decidimos expandir todo el dataset modificando sus imágenes, aplicándo las siguientes transformaciones:
+Para nuestra primera prueba decidimos expandir todo el dataset. Para esto, optamos por aplicar las siguientes transformaciones (usando los métodos de tensorflow) a las imagenes:
 
 * Rotación (150º).
 * Espejado (vertical).
 * Contraste (0.2). 
 
-Todo esto cons los métodos de tensorflow para el manejo de imágenes.
+En principio la idea era generar una imagen por cada transformación, pero esto ocasionaba que el dataset creciera demasiado, ocupando hasta 8GB de RAM cuando se cargaban para el entrenamiento. 
 
-En principio optamos por crear una imagen por cada transformación. Esta idea fue rechazada porque el dataset crecía demasiado, ocupando demasiada RAM cuando se cargaban para el entrenamiento. 
-
-Por ello, decidimos crear una sola imagen por cada imagen en el dataset a la cual se le aplicaran las 3 transformaciones. Estas imágenes eran guardadas en una carpeta llamada `modify`.
+Por ello, decidimos crear una sola imagen donde se aplicaran las 3 transformaciones y se guardaban en una carpeta llamada `modify`.
 
 Esto mejoró la red original apróximando bastante bien la mayoría de veces. 
 
@@ -39,13 +38,15 @@ Aún así, no logramos mejorar sus valores con ningún cambio en la red. Aparent
 
 * loss: 0.0099 - accuracy: 0.9874 - val_loss: 0.0454 - val_accuracy: 0.9518
 
-Pero en la parte de testeo os valores obtenidos al predecir ni se acercaban al original.
+Pero en la parte de testeo los valores obtenidos al predecir ni se acercaban al original.
 
 !["img2.png"](/imgs/img2.png)
 
 Esto lo puede ver en detalle en el archivo: `primera-forma-con-cambios-en-red-neuronal.ipynb`
 
 ### Segunda forma
+
+* Notebook Resultado segunda forma: https://www.kaggle.com/maurinuez/reto-proyecto-meia
 
 Aplicamos data aumentation al conjunto de datos de entrenamiento utilizando los metodos de tensorflow para manejo de estructuras de tensores:
 
@@ -59,5 +60,3 @@ Aplicamos data aumentation al conjunto de datos de entrenamiento utilizando los 
 - ajuste de contraste
 - ajuste de brillo
 - ajuste de saturacion
-
-## Notebook Resultado segunda forma: https://www.kaggle.com/maurinuez/reto-proyecto-meia
