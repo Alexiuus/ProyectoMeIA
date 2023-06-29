@@ -33,6 +33,8 @@ Esto mejoró la red original apróximando bastante bien la mayoría de veces.
 
 !["img1.png"](/imgs/img1.png)
 
+Esto lo puede ver en detalle en el archivo: `primera-forma-sin-cambios-en-red-neuronal.ipynb`
+
 Aún así, no logramos mejorar sus valores con ningún cambio en la red. Aparentemente, se ocasionaba un sobreajuste en el entrenamiento, esto porque los valores en entrenamiento nos daban mucho mejor:
 
 * loss: 0.0099 - accuracy: 0.9874 - val_loss: 0.0454 - val_accuracy: 0.9518
@@ -40,6 +42,8 @@ Aún así, no logramos mejorar sus valores con ningún cambio en la red. Aparent
 Pero en la parte de testeo os valores obtenidos al predecir ni se acercaban al original.
 
 !["img2.png"](/imgs/img2.png)
+
+Esto lo puede ver en detalle en el archivo: `primera-forma-con-cambios-en-red-neuronal.ipynb`
 
 ### Segunda forma
 
