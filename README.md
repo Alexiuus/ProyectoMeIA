@@ -59,3 +59,5 @@ Aplicamos data aumentation al conjunto de datos de entrenamiento utilizando los 
 - ajuste de contraste
 - ajuste de brillo
 - ajuste de saturacion
+
+## Notebook Resultado segunda forma: https://www.kaggle.com/maurinuez/reto-proyecto-meia
