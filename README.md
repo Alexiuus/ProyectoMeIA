@@ -39,7 +39,7 @@ Aún así, no logramos mejorar sus valores con ningún cambio en la red. Aparent
 
 Pero en la parte de testeo os valores obtenidos al predecir ni se acercaban al original.
 
-!["img2.png"](/imgs/img1.png)
+!["img2.png"](/imgs/img2.png)
 
 ### Segunda forma
 
